@@ -1,1 +1,5 @@
+com/hyma/WebProject/controller/AccountController.class
 com/hyma/WebProject/WebProjectApplication.class
+com/hyma/WebProject/model/Account.class
+com/hyma/WebProject/service/AccountService.class
+com/hyma/WebProject/repository/AccountRepository.class

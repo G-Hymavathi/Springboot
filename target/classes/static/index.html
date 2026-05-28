@@ -3,11 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BZ Bank - Home</title>
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <h1>
-        Hello hyma...
-    </h1>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">BZ Bank</div>
+            <ul class="nav-links">
+                <li><a href="javascript:void(0)" id="nav-home" class="active" onclick="showPage('home')">Home</a></li>
+                <li><a href="javascript:void(0)" id="nav-create" onclick="showPage('create-account')">Create Account</a></li>
+                <li><a href="javascript:void(0)">Credit Cards</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Services ▾</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0)">Apply for Debit Card</a>
+                        <a href="javascript:void(0)">Personal & Home Loans</a>
+                        <a href="javascript:void(0)">Insurance Plans</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <div id="home-view">
+            <h2>Welcome to BZ Bank</h2>
+            <br>
+            <div class="grid-col-right">
+                <div class="premium-block">
+                    <h3>Our Core Retail Services</h3>
+                    <div class="services-showcase-grid">
+                        <div class="service-promo-card">
+                            <div class="promo-icon">💳</div>
+                            <h4>Smart Credit Lines</h4>
+                            <p>Tailored card accounts featuring zero annual maintenance charges.</p>
+                        </div>
+                        <div class="service-promo-card">
+                            <div class="promo-icon">🏠</div>
+                            <h4>Asset & Housing Loans</h4>
+                            <p>Flexible real estate financing solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="create-account-view" style="display: none;">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Open a New Account</h2>
+                    <p>Join BZ Bank and manage your assets with secure platform tools.</p>
+                </div>
+                <form id="signupForm" onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required placeholder="Enter your full legal name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountType">Account Type</label>
+                        <select id="accountType" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="checking">Checking Account</option>
+                            <option value="savings">Savings Account</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Create a strong password">
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Application</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/site.js"></script>
 </body>
 </html>
